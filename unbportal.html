@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unofficial Transcript - UNB</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+        .navbar {
+            background: #000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1rem;
+        }
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .logo img {
+            height: 30px;
+        }
+        .navbar .actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .breadcrumbs {
+            padding: 1rem;
+            background: white;
+            font-size: 14px;
+        }
+        .breadcrumbs a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .content {
+            padding: 2rem;
+            background: white;
+        }
+        .content h1 {
+            margin-bottom: 1rem;
+        }
+        .warning {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 1rem;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .warning i {
+            margin-right: 10px;
+        }
+        .link-box {
+            margin-bottom: 2rem;
+        }
+        .link-box a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        .link-box a i {
+            margin-right: 8px;
+        }
+        .footer {
+            background: #e9ecef;
+            padding: 1rem;
+            text-align: center;
+            font-size: 12px;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://www.unb.ca/webcomps/_css/unb_white_sm.png" alt="UNB Logo">
+        </div>
+        <div class="actions">
+            <span>sabbas3</span>
+            <button>Sign out</button>
+            <button>Help</button>
+        </div>
+    </div>
+
+    <div class="breadcrumbs">
+        <a href="#">Academics</a> &gt; <a href="#">Unofficial Transcript</a>
+    </div>
+
+    <div class="content">
+        <h1>Unofficial Transcript</h1>
+        <div class="warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            These documents are unofficial and should not replace the official signed and sealed transcript provided by the Registrar. Note: if you were registered prior to the year 2000, please request your unofficial pre-2000 transcript through your campus Office of the Registrar.
+        </div>
+
+        <div class="link-box">
+            <a href="#" id="download-link"><i class="fas fa-file-pdf"></i>UNB Unofficial Credit Transcript</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2000-2025 Ellucian Company L.P. and its affiliates. All rights reserved. <a href="#">Privacy</a>
+    </div>
+
+    <script>
+        document.getElementById('download-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            const link = document.createElement('a');
+            link.href = 'Abbas_Syed_Muhammad_3660179_3_16_2025.pdf';
+            link.download = 'UNB_Transcript.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    </script>
+</body>
+</html>
